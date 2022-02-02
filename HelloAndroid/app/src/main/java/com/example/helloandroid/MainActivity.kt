@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,5 +24,7 @@ class MainActivity : AppCompatActivity() {
         helloTextView.text = "Hello $name"
 
         Log.d("test", "This is a test")
+
+        Toast.makeText(this, "Hello $name", Toast.LENGTH_SHORT).show()
     }
 }
