@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -22,17 +23,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:labelFor="@id/name_edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
         android:text="@string/enter_your_name" />
 
     <EditText
         android:inputType="textPersonName"
         android:id="@+id/name_edit_text"
         android:autofillHints="none"
-        app:layout_constraintTop_toTopOf="@id/name_prompt_textview"
+        app:layout_constraintBaseline_toBaselineOf="@id/name_prompt_textview"
         app:layout_constraintLeft_toRightOf="@id/name_prompt_textview"
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
 
+    <Spinner android:id="@+id/my_spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/name_edit_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
